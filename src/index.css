@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Limelight&display=swap');
+
+.logo {
+  border: 2px solid skyblue;
+  color: brown;
+  font-family: 'Limelight', cursive;
+}
+
+.divider {
+  background: linear-gradient(to right, skyblue, brown);
+  border: 0;
+  height: 3px;
+}
+
+@media (min-width: 768px) {
+  .logo {
+    border: 4px solid skyblue;
+  }
+}
+
+@media (min-width: 1024px) {
+  .divider {
+    display: none;
+  }
+
+  .post-summary {
+    background: linear-gradient(to bottom right, skyblue, brown);
+    transition: background 250ms ease-in-out;
+  }
+}

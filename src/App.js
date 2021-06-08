@@ -4,8 +4,6 @@ import { blogData } from "./blogData";
 
 import Nav from "./Nav";
 
-import './App.css';
-
 
 function Home() {
   return (

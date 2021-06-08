@@ -47,7 +47,7 @@ function PostFull() {
 
       <article className="m-4 xs:mx-16 xs:my-0 xs:py-4 sm:mx-20 md:mx-32 lg:mx-48 xl:mx-64 2xl:mx-auto 2xl:w-2/5">
         <header className="text-center">
-          <h2 className="font-extrabold text-xl md:text-3xl lg:text-4xl">{title}</h2>
+          <h2 className="font-extrabold text-xl md:text-3xl lg:mx-auto lg:text-4xl lg:w-2/3">{title}</h2>
           <p className="text-sm md:text-lg lg:text-2xl">by {author}</p>
           <p className="font-light italic text-xs lg:text-sm">posted {timestamp}</p>
         </header>

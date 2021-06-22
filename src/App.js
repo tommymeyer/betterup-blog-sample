@@ -18,7 +18,7 @@ function Home() {
                 <Link to={`/${slug}`}>
                   <h2 className="font-semibold text-base truncate md:text-xl">{title}</h2>
                   <p className="text-sm truncate">{content[0]}</p>
-                  <p className="font-light italic mt-1 text-right text-xs">posted {timestamp}</p>
+                  {/* <p className="font-light italic mt-1 text-right text-xs">posted {timestamp}</p> */}
                 </Link>
               </div>
               <hr className="divider" />
@@ -34,7 +34,7 @@ function Home() {
 function PostFull() {
   const { slug } = useParams();
   const post = blogData[slug];
-  const { author, content, timestamp, title } = post;
+  const { author, content, title } = post;
   const renderParagraphs = content.map((paragraph, index) => <p key={index + 10} className="mb-4 text-sm tracking-wide last:mb-24 md:text-base lg:text-lg">{paragraph}</p>);
 
   if (!post) {
@@ -43,13 +43,23 @@ function PostFull() {
 
   return (
     <>
+      <ul className="flex m-8">
+        <li className="breadcrumb">
+          <Link to="/">Home</Link>
+        </li>
+        <span className="mx-2">/</span>
+        <li className="breadcrumb">
+          <Link to={`/${slug}`}>{title}</Link>
+        </li>
+      </ul>
+
       <Nav />
 
       <article className="m-4 xs:mx-16 xs:my-0 xs:py-4 sm:mx-20 md:mx-32 lg:mx-48 xl:mx-64 2xl:mx-auto 2xl:w-2/5">
         <header className="text-center">
           <h2 className="font-extrabold text-xl md:text-3xl lg:mx-auto lg:text-4xl lg:w-2/3">{title}</h2>
           <p className="text-sm md:text-lg lg:text-2xl">by {author}</p>
-          <p className="font-light italic text-xs lg:text-sm">posted {timestamp}</p>
+          {/* <p className="font-light italic text-xs lg:text-sm">posted {timestamp}</p> */}
         </header>
         <div className="my-4 text-center md:my-8 md:text-lg lg:text-xl">📚 📚 📚 📚 📚</div>
         {renderParagraphs}

@@ -3,6 +3,15 @@
 @tailwind utilities;
 @import url('https://fonts.googleapis.com/css2?family=Limelight&display=swap');
 
+
+.breadcrumb {
+  @apply border-b-2 border-transparent font-medium pb-1 transition-colors duration-200 ease-in-out;
+}
+
+.breadcrumb:hover {
+  border-color: black;
+}
+
 .logo {
   border: 2px solid skyblue;
   color: brown;
